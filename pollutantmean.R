@@ -1,8 +1,7 @@
-pollutantmean <- function(directory,pollutant,id) {
+pollutantmean <- function(directory,pollutant,id=1:332) {
     allfiles <- list.files(directory, full.names=TRUE)
     allfiles
     monitors <- data.frame()
-    j <- 1;
     for (i in id) {
       monitors <- rbind(monitors, read.csv(allfiles[i]))
     }
