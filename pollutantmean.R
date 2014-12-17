@@ -1,3 +1,9 @@
+# Calculates mean pollutant levels for selected monitors using function
+# call pollutantmean(directory, pollutant, ID) where directory is the
+# subdirectory (of the R working directory) containing the monitor data
+# files, the pollutant is either nitrate or sulfate, and the ID is the id
+# number or range of numbers for the monitor(s) of interest.
+
 pollutantmean <- function(directory,pollutant,id) {
     allfiles <- list.files(directory, full.names=TRUE)
     allfiles
